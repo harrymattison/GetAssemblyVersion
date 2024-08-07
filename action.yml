@@ -1,0 +1,16 @@
+name: 'get-version-assemblyinfo'
+description: 'Get the version in the AssemblyInfo.cs file'
+author: 'harrymattison'
+branding:
+  color: purple
+  icon: edit-3
+inputs:
+  path:
+    description: # Folder location to search for AssemblyInfo.cs/.vb file
+    required: false
+    default: '${{ github.workspace }}'
+outputs:
+  version: 
+runs:
+  using: 'node20'
+  main: 'index.js'
